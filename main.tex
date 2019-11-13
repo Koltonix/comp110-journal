@@ -1,8 +1,8 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
-\title{Your Title Here}
-\author{Your student number here}
+\title{"Letters to the editor: go to statement considered harmful" Purpose, Context and Influences}
+\author{Christopher Robertson \\* 1902625}
 
 \usepackage{natbib}
 \usepackage{graphicx}
@@ -10,21 +10,37 @@
 \begin{document}
 
 \maketitle
+\newpage
 
 \section{Introduction}
 
-This is the template project for COMP110 Assignment 2: Research Journal.
+Edsger W. Dijkstra was one of the first few academics to notice the trends of his time when it came to the skill and competence of his fellow programmers and how the trend of writing code shifted into one that cared more about time efficiency in terms of both the compiler and real life. This raised concern with him since he believe that readability and maintainability are far more important factors in the matter than speed. He did this by writing his article on the GoTo statement where he discusses the uses and implications of the method \cite{dijkstra1968_goto}.
 
-\section{Another section heading}
+\section{Programming Quality}
+One of Dijkstra's reasons for writing the "Go To Statement Considered Harmful" \cite{dijkstra1968_goto} was because he saw the quality of programmers decreasing during the 1960s and saw the GoTo statement as a blatant example of how a programmer might choose to use it over a While loop, or some other iterative method because it is easier. In an ACM Forum paper 10 years later this issue was brought up again where the writer Ashenhurst disagrees with a local competition being held where the student programmers were told to make a program that would be judged on speed and efficiency, but Ashenhurst had disagreed saying it should be about maintainability otherwise they would be heading towards the 'dark days' \cite{Ashenhurst:1978:AFS:359327.359339} of programming like before and reference Dijkstra's work. Furthermore, another piece of work also argued this too titled 'C++ Templates Considered Harmful' \cite{Haiduk:2004:CTC:1050231.1050261} where he often found a lot of his students using default C++ templates rather than creating their own which he claimed that computer science texts 'rely heavily' \cite{Haiduk:2004:CTC:1050231.1050261} on said templates. Much like the GoTo statement, Haiduk was never arguing the removal of them, but to instead ensure that programmers are aware of their choices and which ones might be more beneficiary to them.
+\\
+\\
+Another unique perspective on the programming quality declining was brought by the magazine article of 'Fast Development Tools Considered Harmful' \cite{Berque:2013:FDT:2505990.2506003}. The article argued that the increase in fast development tools had led to an influx of programmers relying too much on the trial and error aspect of programming and failing to use any rational thinking. Berque is quoted in saying 'Don't experiment when you should think; don't think when you should experiment' \cite{Berque:2013:FDT:2505990.2506003}. This statement reflects the thoughts that Dijkstra had with the GoTo statement where he felt programmers relied it on far too much despite it causing issues of its own although he admitted it has its uses appropriately at times. A newsletter by Doss titled "Using GoTo Statements" \cite{Doss:2014:UGS:2659118.2659129} also agreed with the notion that GoTo statements do have their place and presents a variety of examples which disprove any concerns Dijkstra had with the GoTo statement, yet desite this Doss still agrees that they are useful in 'controlled cases' and not a 'general solution' to all problems.
 
-Use section headings to divide your report into meaningful sections.
+Much like how Dijkstra argues that the GoTo statement, Polymorphism was also argued to be a concept that could be very easily 'abused' \cite{Ponder:1992:PCH:130981.130991} by the programmer which can lead to a variety of readability and maintainable issues down the line. Much like Dijkstra, Ponder agrees that Polymorphism has its place and can be used, but references it as a 'magic bullet'\cite{Ponder:1992:PCH:130981.130991} that are usually double edged swords in the same way that Dijkstra argues that GoTo statements can have their place, but will often cause harm as a repercussion.
+\\
+\section{Readability and Maintainability}
+Dijkstra's work was also influential in making other academics consider the problems issues caused by a lack of a readability where his is quoted in saying that GoTo statements are an 'invitation to make a mess of one's program' \cite{dijkstra1968_goto}. He argues that this is the case due to us thinking statically while the program is far more dynamic, so using a GoTo can cause readability issues for us. Wulf \cite{Wulf:1973:GVC:953353.953355} also agrees with the idea of a static thinking mindset versus the dynamic program where he uses Dijkstra's exact point to discuss why global variables should be explicitly stated as global since otherwise it causes a variety of readability issues just like the GoTo statement.
+\\
+\\
+An example of the GoTo resulting in poor readability for debugging is in the magazine article called "An empirical study of the reliability of UNIX utilities" \cite{Miller:1990:ESR:96267.96279} where the authors went through a variety of UNIX utilities to see if they were able to break any of the programs to see if they could fix them. When trying to identify the a 'bad pointer' \cite{Miller:1990:ESR:96267.96279} which was causing an issue they were having difficulty figuring it out due to the GoTo statement. This is precisely Dijkstra's point in how the readability of a program can cause a tremendous amount of issues down the line which require more time than if the programmer had decided to properly write it instead.
+\\
+In the 1984 an magazine article was published named "ADA:: past, present, and future' by Ichbiah \cite{Ichbiah:1984:APP:358274.358278} which discusses the creation of a new programming language that the U.S. Department of Defense wanted called 'ADA'. In it he goes through a variety of interview questions and one of which discusses the GoTo argument where we think statically while the program execution is dynamic. As a result of Dijkstra's paper he stated that he wanted to try and reduce dynamic dimension of program execution since he claims that 'programs are only going to be correct if we understand that they are correct' \cite{Ichbiah:1984:APP:358274.358278} which is exactly the argument that Dijkstra is arguing in his paper which was referenced during the interview. This presents the importance of having well maintained code and the real life implications which can not only be relevant to national security, but also to something like healthcare which might result in an issue caused by poor maintainability which might end up costing someone's life as a result. Although a very extreme scenario it is still a possibility to consider.
 
-Use BibTeX to cite your sources. Entries have already been added to \texttt{references.bib} for the papers on the reading list.
-These papers cover topics such as artificial intelligence~\cite{turing1950_intelligence, knuth1975_alphabeta}, programming language design~\cite{dijkstra1968_goto}, crpytography~\cite{rivest1978_rsa}, graphics rendering~\cite{phong1975_illumination}, and collision detection~\cite{gilbert1988_gjk}.
 
+\section{Commercial Interest}
+Commercial interests also played a role in making Dijkstra write his paper since he noticed at his time that the academic integrity was put in jeopardy since the commercial industry did not care for the readability, or maintainability, but instead would only care for how quick something can be finished for profits. The paper written on him by Alan Creak titled appropriately "Edsger W. Dijkstra" \cite{Creak:2002:EWD:636517.636521} discusses this too where he states that it is a pivotal message, but one that is still 'largely ignored' \cite{Creak:2002:EWD:636517.636521}. The unfortunate truth is that commercial interests also influence the industry just as much as the academic side and might be argued to have more at some points, so Dijkstra wanted to try and solve this by informing people about the negatives of using poorly maintained and readable code.
+\\
+\\
+Although it might still be considered to be 'largely ignored' \cite{Creak:2002:EWD:636517.636521} by the commercial industry I would argue that is not the case in the academics since there is even a paper written in 1994 - 26 years after Dijkstra's - titled 'Polymorphism Considered Harmful' \cite{Ponder:1992:PCH:130981.130991} where he argues many of the points that Dijkstra presented in his argument such as the difficult readability and the issues that can occur if not properly addressed. In his introduction he event admits that Dijkstra's paper has had a 'fundamental influence on software engineering and programming language design' \cite{Ponder:1992:PCH:130981.130991} which shows that even so many years after his paper is still relevant and the ideas and concepts hold to this day.
+\\
 \section{Conclusion}
-
-See LearningSpace for the assignment brief, containing information on marking criteria and further guidance.
+In conclusion, Dijkstra's paper presented the many problems he saw appearing during his time in his industry where he saw the drop in programming quality due to such concepts such as the GoTo statement which he wanted people to be aware of and to ultimately remove from higher level languages since it can be too easily abused and is 'an invitation to make a  mess of one's program'\cite{dijkstra1968_goto}. He also presented the argument of readability and maintainability over time efficiency which years later was later referred to as the 'dark days' \cite{Ashenhurst:1978:AFS:359327.359339} of programming. His paper influenced and inspired many others to present their own cases for each programming concept ranging from such as globals to polymorphism and using his work as evidence in those cases. When doing the research into Dijkstra's papers I noticed myself how many were named something along the lines of '[concept] considered harmful' where they will argue very similar points to Dijkstra. The papers that cite Dijkstra range from being 40 years old all the way to only 15 years old which shows that even to this day his paper holds strong relevance. Although even today there are many concepts and tools that make use of speed over readability and maintainability it can be said that using a GoTo is not as common as it once was and Dijkstra's paper helped influence that change.
 
 \bibliographystyle{plain}
 \bibliography{references}
